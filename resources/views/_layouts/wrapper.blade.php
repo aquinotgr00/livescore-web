@@ -73,32 +73,22 @@
                             </div>
                             <div class="col px-0">
                                 <li class="nav-item">
+                                    <a class="nav-link" href="#">Champions League</a>
+                                </li>
+                            </div>
+                            <div class="col px-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Europa League</a>
+                                </li>
+                            </div>
+                            <div class="col px-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">EURO</a>
+                                </li>
+                            </div>
+                            <div class="col px-0">
+                                <li class="nav-item">
                                     <a class="nav-link" href="#">World Cup</a>
-                                </li>
-                            </div>
-                            <div class="col px-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Hockey</a>
-                                </li>
-                            </div>
-                            <div class="col px-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Basketball</a>
-                                </li>
-                            </div>
-                            <div class="col px-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Tennis</a>
-                                </li>
-                            </div>
-                            <div class="col px-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Cricket</a>
-                                </li>
-                            </div>
-                            <div class="col px-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
                                 </li>
                             </div>
                         </div>

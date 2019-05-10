@@ -13,39 +13,57 @@ use DateInterval;
 
 class HomeController extends Controller
 {
-    public function index()
+    protected $client;
+
+    public function __construct()
     {
-        $client = new Client([
+        $this->client = new Client([
             'base_uri' => 'https://www.thesportsdb.com/api/v1/json/1/',
             'timeout'  => 5.0,
         ]);
-        $today = date('Y-m-d');
+    }
+
+    public function index()
+    {
         $begin = new DateTime('NOW');
-        $begin->modify('-3 days');
+        // $begin->modify('-3 days');
         $end = new DateTime('NOW');
-        $end->modify('+4 days');
+        // $end->modify('+4 days');
 
         $period = new DatePeriod(
-            $begin,
+            $begin->modify('-3 days'),
             new DateInterval('P1D'),
-            $end
+            $end->modify('+4 days')
         );
 
         foreach ($period as $key => $value) {
             $days[] = $value->format('M d');
         }
 
+        $data = $this->getLatestMatches();
+        
+        if ( isset($data['request']) ) { // if there's error
+            $error = 'Server timed out. Please refresh several times.';
+            return view('front.index', compact('error'));
+        }
+
+        // return $data;
+        return view('front.index', compact('data', 'days'));
+    }
+
+    public function getLatestMatches()
+    {
+        $today = date('Y-m-d');
         try {
-            $response = $client->request('GET', 'eventsday.php?d='.$today.'&s=Soccer');
+            $response = $this->client->get('eventsday.php?d='.$today.'&s=Soccer');
         } catch (RequestException $e) {
             if ($e->hasResponse()) {
                 $error['response'] = Psr7\str($e->getResponse());
             }
             $error['request'] = Psr7\str($e->getRequest());
-            return view('front.index', compact('error'));
+            return $error;
         }
-        $data = json_decode($response->getBody())->events;
-        // return $data;
-        return view('front.index', compact('data', 'days'));
+        
+        return json_decode($response->getBody())->events;
     }
 }
