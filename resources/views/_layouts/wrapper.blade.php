@@ -63,40 +63,40 @@
     <div class="row">
         <div class="col-md-12 mb-5">
             <div class="card text-center">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <div class="row w-100">
-                            <div class="col">
+                <div class="card-header px-0">
+                    <ul class="nav nav-tabs card-header-tabs mx-0">
+                        <div class="row w-100 mx-0">
+                            <div class="col px-0">
                                 <li class="nav-item">
                                     <a class="nav-link active" href="#">Soccer</a>
                                 </li>
                             </div>
-                            <div class="col">
+                            <div class="col px-0">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">World Cup</a>
                                 </li>
                             </div>
-                            <div class="col">
+                            <div class="col px-0">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Hockey</a>
                                 </li>
                             </div>
-                            <div class="col">
+                            <div class="col px-0">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Basketball</a>
                                 </li>
                             </div>
-                            <div class="col">
+                            <div class="col px-0">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Tennis</a>
                                 </li>
                             </div>
-                            <div class="col">
+                            <div class="col px-0">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Cricket</a>
                                 </li>
                             </div>
-                            <div class="col">
+                            <div class="col px-0">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contact</a>
                                 </li>

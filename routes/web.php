@@ -1,9 +1,7 @@
 <?php
 use GuzzleHttp\Client;
 
-Route::get('/', function () {
-    return view('front.index');
-});
+Route::get('/', 'HomeController@index')->name('homepage');
 
 Route::get('/test', function () {
     $client = new Client(['base_uri' => 'https://www.thesportsdb.com/api/v1/json/1/']);
